@@ -10,7 +10,7 @@ let langName = prompt('Каково "официальное" название Ja
 
 //2 скрин
 
-/*let test = prompt();
+let test = prompt();
 
     if (test > 0) {
         alert(1);
@@ -20,27 +20,25 @@ let langName = prompt('Каково "официальное" название Ja
         }
     else  {
         alert(0);
-    }*/
+    }
 
 //3 скрин
 
-/*let login = prompt('Кто пришел?');
+let login = prompt('Кто пришел?');
 
-    if (login == 'Админ') {
-        prompt('Пароль?');
-        if (login == 'Черный Властелин') {
-            alert('Добро пожаловать!');
-        }
-        else if (login !== 'Черный Властелин') {
-            alert('Пароль неверен');
-        }
-        else {
-            alert('Вход отменен');
-        }
+if (login == 'Админ') {
+    let password = prompt('Пароль?');
+    if (password == 'Черный Властелин') {
+        alert('Добро пожаловать!');
+    } else if (password == null) {
+        alert('Вход отменен');
+    } else {
+        alert('Пароль неверен');
     }
-    else if (login !== 'Админ') {
-            alert('Я вас не знаю');
-        }
-        else {
-            alert('Вход отменен');
-        }*/
+}
+else if (login == null) {
+    alert('Вход отменен');
+}
+else {
+    alert('Я вас не знаю');
+}
