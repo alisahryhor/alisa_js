@@ -8,36 +8,34 @@
     <title>Document</title>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <style>
-        #langs p {display: none;}
-        #langs p.first {display: block;}
+    	#slider img {display: none;}
+    	#slider img.first {display: block;}
     </style>
 </head>
 <body>
-    <h3>Выбранный язык</h3>
-    <div id="langs">
-        <p class="first">Java</p>
-        <p>C/C++</p>
-        <p>PHP</p>
-        <p class="last">JavaScript</p>
-    </div>
-<button id="prev">Назад</button>
-<button id="next">Вперед</button>
-<script type="text/javascript">
-    $(function (){
-        var current = $("div#langs p").first();
-        $("#next").click(function (){
-            $(current).not(".last").hide("fast", function () {
-                current = $(current).next("p");
-                $(current).show("fast");
-            });
-        });
-        $("#prev").click(function () {
-            $(current).not(".first").hide("fast", function () {
-                current = $(current).prev("p");
-                $(current).show("fast");
-                });
-        });
-    });
-</script>
+		<div id="slider">
+			<img class="first" src="img/Layer7.jpg">
+			<img src="img/Layer8.jpg">
+			<img class="last" src="img/Layer9.jpg">
+		</div>
+<button id="prev"><img src="img/arrow-left.jpg"></button>
+<button id="next"><img src="img/arrow-right.jpg"></button>
+	<script type="text/javascript">
+		$(function(){
+			var slider_item = $("div#slider img").first();
+			$("#next").click(function() {
+				$(slider_item).not(".last").hide("slow", function() {
+					slider_item = $(slider_item).next("img");
+					$(slider_item).show("slow");
+				});
+			});
+			$("#prev").click(function() {
+				$(slider_item).not(".first").hide("slow", function() {
+					slider_item = $(slider_item).prev("img");
+					$(slider_item).show("slow");
+				});
+			});	
+		});
+	</script>
 </body>
 </html>
