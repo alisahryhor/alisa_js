@@ -8,25 +8,42 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script>
-    $(document).ready(function (){
-    $("button").click(function (){
-        $("div").click();
-    });
-    $("div").click(function (){
-        $("div").toggle();
-    });
-});
-</script>
+        <script>
+            $(document).ready(function (){
+                $("#hider").click(function (){
+                    $("#text").hide();
+                });
+            });
+        </script>
     </head>
     <body>
        <input type="button" id="hider" value="Нажмите, чтобы спрятать текст">
        <div id="text">Текст</div>
-
-
-   </body>
+    </body>
 </html>
 
-<!-- 2 файл
-<input type="button" onclick="this.hidden=true" value="Нажмите, чтобы спрятать кнопку">
+<!--2 файл-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".button").click(function() {
+                    $(this).hide();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <input class="button" type="button" value="Нажмите, чтобы спрятать кнопку">
+    </body>
+</html>
+
+
 
