@@ -9,16 +9,16 @@
         <title>Document</title>
     </head>
     <body>
-       <input type="button" id="hider" onclick="text" value="Нажмите, чтобы спрятать текст">
+       <input type="button" id="hider" value="Нажмите, чтобы спрятать текст">
        <div id="text">Текст</div>
-
+       <input type="button" onclick="this.hidden=true" value="Нажмите, чтобы спрятать кнопку">
     <script>
-       const text = document.getElementById('text');
-       text.onclick = hidden=true;
+        document.getElementById('hider').onclick = function() {
+            document.getElementById('text').hidden = true;
+        }
     </script>
    </body>
 </html>
 
-<!-- 2 файл-->
-<input type="button" onclick="this.hidden=true" value="Нажмите, чтобы спрятать кнопку">
+
 
