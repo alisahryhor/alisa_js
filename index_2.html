@@ -1,4 +1,4 @@
-<!doctype html>
+<!--<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,5 +37,54 @@
 			});	
 		});
 	</script>
+</body>
+</html>-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #slider2 p {display: none;}
+        #slider2 p.first_reviews {display: block;}
+    </style>
+</head>
+<body>
+<div id="slider1">
+    <span><big><i>Последние статьи</i></big></span>
+    <img src="img/Layer10.jpg" alt="">
+    <p class="articles">Рыбный текст – это текст, выполняющий исключительно утилитарную функцию. Он не вписывается в контекст сайта, на котором используется, и нужен только для заполнения пространства. Зачастую такой текст даже не имеет четкого смысла и представляет собой набор слов и фраз, которые вроде бы формируют грамматически верные конструкции, но какой-либо мысли в них не прослеживается.</p>
+    <button id="prev1"><img src="img/arrow-left.jpg" alt=""></button>
+    <button id="next1"><img src="img/arrow-right.jpg" alt=""></button>
+</div>
+<div id="slider2">
+    <span><big><i>Отзывы о нас</i></big></span>
+    <p class="first_reviews">Рыбный текст – это текст, выполняющий исключительно утилитарную функцию. Он не вписывается в контекст сайта, на котором используется, и нужен только для заполнения пространства. Зачастую такой текст даже не имеет четкого смысла и представляет собой набор слов и фраз, которые вроде бы формируют грамматически верные конструкции, но какой-либо мысли в них не прослеживается.</p>
+    <p>Рыбу используют вебмастера, веб-дизайнеры и разработчики, у которых нет под рукой готового текста, но нужно как-то оценить внешний вид контента на готовой странице. Оценить, насколько хорошо он вписывается в дизайн и не «плывет» ли верстка.</p>
+    <p class="last_reviews">Это наиболее распространенный вариант рыбного текста, использующийся в печатной индустрии, в дизайне и в разработке. Lorem Ipsum обрел свое нынешнее назначение еще в 16 веке. Тогда неизвестный печатник использовал этот отрывок, чтобы показать разные варианты шрифтов в специальной книге с образцами начертаний текста.</p>
+    <button id="prev2"><img src="img/arrow-left.jpg" alt=""></button>
+    <button id="next2"><img src="img/arrow-right.jpg" alt=""></button>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var slider2_item = $("div#slider2 p").first_reviews();
+        $("#next2").click(function() {
+            $(slider2_item).not(".last_reviews").hide("slow", function() {
+                slider2_item = $(slider2_item).next("p");
+                $(slider2_item).show("slow");
+            });
+        });
+        $("#prev2").click(function() {
+            $(slider2_item).not(".first_reviews").hide("slow", function() {
+                slider2_item = $(slider2_item).prev("p");
+                $(slider2_item).show("slow");
+            });
+        });
+    });
+</script>
 </body>
 </html>
