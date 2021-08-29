@@ -11,7 +11,7 @@
   },
   "scripts": {
     "css:compile": "gulp scss",
-    "build": "gulp sass",
+    "build": "gulp sass & gulp image",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
