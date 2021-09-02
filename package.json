@@ -1,0 +1,30 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "gulp-sass": "^5.0.0",
+    "jquery": "^3.6.0",
+    "sass": "^1.39.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "build:webpack": "webpack",
+    "css:compile": "gulp scss",
+    "build:gulp": "gulp sass & gulp image",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alisahryhor/alisa_js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alisahryhor/alisa_js/issues"
+  },
+  "homepage": "https://github.com/alisahryhor/alisa_js#readme"
+}
